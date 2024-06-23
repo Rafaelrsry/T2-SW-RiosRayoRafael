@@ -38,6 +38,14 @@ public class MedicoController {
         return new ResponseEntity<>(medico, HttpStatus.OK);
     }
 
+    @PostMapping("")
+    public ResponseEntity<Medico> registrarMedico(
+            @RequestBody Medico medico
+    ){
+        return new ResponseEntity<>(
+                medicoService.guardarMedico(medico), HttpStatus.CREATED);
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Medico> actualizarMedico(
             @PathVariable Integer id,
