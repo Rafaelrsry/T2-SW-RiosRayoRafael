@@ -26,7 +26,7 @@ public class Medico {
 
 
 
-    @Column(name = "apeMedico")
+    @Column(name = "apemedico")
     private String apeMedico;
 
     @Column(name = "fechnacmedico")
