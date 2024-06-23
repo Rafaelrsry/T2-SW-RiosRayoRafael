@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,5 +19,16 @@ public class Medico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idmedico;
+
+    @Column(name = "nommedico")
+    private String nommedico;
+
+
+
+    @Column(name = "apeMedico")
+    private String apeMedico;
+
+    @Column(name = "fechnacmedico")
+    private Date fechnacmedico;
 }
